@@ -44,7 +44,7 @@ Clone the repository and run the project:
 git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
 python -m venv venv
-.\venv\Scripts\Activate.ps1   # PowerShell
+.\venv\Scripts\Activate.ps1   
 pip install -r requirements.txt
 streamlit run app.py
 
