@@ -20,7 +20,7 @@ It leverages **Hugging Face Transformers** models for accurate NLP tasks and pro
 
 - **Optimizations**
   - Models are **cached** for faster performance
-  - **Multi-threading** used to preload models
+  - **Eager model loading** for instant first-run analysis
   - Lexicon-based explanation via **VADER** (optional)
 
 ---
@@ -41,12 +41,14 @@ It leverages **Hugging Face Transformers** models for accurate NLP tasks and pro
 Clone the repository and run the project:
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/&lt;your-username&gt;/&lt;repo-name&gt;.git
+cd &lt;repo-name&gt;
 python -m venv venv
 .\venv\Scripts\Activate.ps1   
 pip install -r requirements.txt
 streamlit run app.py
+
+
 
 ⚠️ If PowerShell blocks the script, run:
 
@@ -63,13 +65,15 @@ Sentiment Analysis:
 | The movie was okay, not too bad but not great. | Negative            | 60%        |
 
 
+
 POS Tagging:
 
-| Input Text                                      | POS Highlights (Examples)                                                       |
-| ----------------------------------------------- | ------------------------------------------------------------------------------- |
-| The quick brown fox jumps over the lazy dog.    | The(Noun), quick(Adj), brown(Adj), fox(Noun), jumps(Verb), lazy(Adj), dog(Noun) |
-| She happily sang beautiful songs in the garden. | She(Pron), happily(Adv), sang(Verb), beautiful(Adj), songs(Noun), garden(Noun)  |
-| Running fast, he quickly finished the race.     | Running(Verb), fast(Adv), he(Pron), quickly(Adv), finished(Verb), race(Noun)    |
+| Input Text                                      | POS Highlights (Examples)                                                                  |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| The quick brown fox jumps over the lazy dog.    | The(Det), quick(Adj), brown(Adj), fox(Noun), jumps(Verb), over(Prep), lazy(Adj), dog(Noun) |
+| She happily sang beautiful songs in the garden. | She(Pron), happily(Adv), sang(Verb), beautiful(Adj), songs(Noun), in(Prep), garden(Noun)   |
+| Running fast, he quickly finished the race.     | Running(Verb), fast(Adv), he(Pron), quickly(Adv), finished(Verb), race(Noun)               |
+
 
 
 📂 Repository Files
